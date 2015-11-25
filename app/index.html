@@ -9,14 +9,16 @@
   <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="PhoneListCtrl">
-  <table>
+  <table width=600px>
     <tr>
       <th>Phone Name</th>
       <th>Snippet</th>
+      <th>ID</th>
     </tr>
     <tr ng-repeat="phone in phones">
       <td>{{phone.name}}</td>
       <td>{{phone.snippet}}</td>
+      <td>{{$index + 1}}</td>
     </tr>
   </table>
 
