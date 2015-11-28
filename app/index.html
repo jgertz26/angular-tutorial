@@ -23,16 +23,16 @@
       </div>
 
       <div class="col-md-10">
-        <table width=600px>
+        <table width=800px>
           <tr>
+            <th>Photo</th>
             <th>Phone Name</th>
             <th>Snippet</th>
-            <th>ID</th>
           </tr>
           <tr ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-            <td>{{phone.name}}</td>
+            <td><a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a></td>
+            <td><a href="#/phones/{{phone.id}}">{{phone.name}}</a></td>
             <td>{{phone.snippet}}</td>
-            <td>{{$index + 1}}</td>
           </tr>
         </table>
       </div>
