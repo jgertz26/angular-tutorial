@@ -12,35 +12,7 @@
 </head>
 <body ng-controller="PhoneListCtrl">
 
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="col-md-2">
-        Search: <input ng-model="query">
-        Sort by:
-        <select ng-model="orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
-        </select>
-      </div>
-
-      <div class="col-md-10">
-        <table width=800px>
-          <tr>
-            <th>Photo</th>
-            <th>Phone Name</th>
-            <th>Snippet</th>
-          </tr>
-          <tr ng-repeat="phone in phones | filter:query | orderBy:orderProp">
-            <td><a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a></td>
-            <td><a href="#/phones/{{phone.id}}">{{phone.name}}</a></td>
-            <td>{{phone.snippet}}</td>
-          </tr>
-        </table>
-      </div>
-
-    </div>
-  </div>
-
+  <div ng-view></div>
+  
 </body>
 </html>
